@@ -49,7 +49,6 @@ for i_SNR = 1:length(M_SNR_dB)
     NMSE_OMP(i_SNR,i_rep)   = 10*log10((norm(H_hat_OMP-H, "fro"))^2/(norm(H,"fro"))^2);
     NMSE_SSD(i_SNR,i_rep)   = 10*log10((norm(H_hat_SSD-H, "fro"))^2/(norm(H,"fro"))^2);
     NMSE_AMP(i_SNR,i_rep)   = 10*log10((norm(H_hat_AMP-H, "fro"))^2/(norm(H,"fro"))^2);
-    NMSE_IAM(i_SNR,i_rep)   = (norm(H_hat_OMP-H, "fro"))^2/(norm(H,"fro"))^2;
 end
 TimePassed = toc;
 if mod(i_rep,10)==0
